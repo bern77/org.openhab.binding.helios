@@ -1,0 +1,9 @@
+import org.openhab.core.library.types.*
+import org.openhab.model.script.actions.*
+
+rule "Umrechnung Filterwechsel Restdauer"
+	when
+	    Item KWL_Filterwechsel_Restdauer changed
+	then
+	    postUpdate(KWL_Filterwechsel_Restdauer_d, (KWL_Filterwechsel_Restdauer.state as DecimalType) / 60 / 24)
+	end

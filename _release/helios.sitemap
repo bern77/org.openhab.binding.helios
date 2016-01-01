@@ -1,0 +1,36 @@
+sitemap demo label="KWL"
+{
+	Frame label="Manuelle Bedienung" {
+		Switch item=KWL_Manuell mappings=[OFF=Auto, ON=Manuell]
+		Selection item=KWL_Stufe mappings=[0=aus, 1="Stufe 1", 2="Stufe 2", 3="Stufe 3", 4="Stufe 4"]
+		Text item=KWL_Stufe_Prozent
+	}
+	
+	Frame label="Partybetrieb" {
+		Switch item=KWL_Partybetrieb mappings=[OFF=Aus, ON=Ein]
+		Selection item=KWL_Partybetrieb_Stufe mappings=[0=aus, 1="Stufe 1", 2="Stufe 2", 3="Stufe 3", 4="Stufe 4"]
+		Selection item=KWL_Partybetrieb_Dauer mappings=[60="60 Minuten", 120="120 Minuten", 180="180 Minuten", 240="240 Minuten"]
+		Text item=KWL_Partybetrieb_Restdauer
+	}
+	
+	Frame label="Ruhebetrieb" {
+		Switch item=KWL_Ruhebetrieb mappings=[OFF=Aus, ON=Ein]
+		Selection item=KWL_Ruhebetrieb_Stufe mappings=[0=aus, 1="Stufe 1", 2="Stufe 2", 3="Stufe 3", 4="Stufe 4"]
+		Selection item=KWL_Ruhebetrieb_Dauer mappings=[60="60 Minuten", 120="120 Minuten", 180="180 Minuten", 240="240 Minuten"]
+		Text item=KWL_Ruhebetrieb_Restdauer
+	}
+	
+	Frame label="Statusinfos" {
+		Text item=KWL_Temp_Aussenluft
+		Text item=KWL_Temp_Zuluft
+		Text item=KWL_Temp_Fortluft
+		Text item=KWL_Temp_Abluft
+		Text item=KWL_Zuluft_RPM
+		Text item=KWL_Abluft_RPM
+		Text item=KWL_Filterwechsel
+		Text item=KWL_Filterwechsel_Restdauer_d
+		Text item=KWL_Fehler
+		Text item=KWL_Warnungen
+		Text item=KWL_Infos
+	}
+}

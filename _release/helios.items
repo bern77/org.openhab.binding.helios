@@ -1,0 +1,32 @@
+Group KWL
+
+// Manuell
+Switch KWL_Manuell "Manueller Betrieb" (KWL) { helios="operating_mode" }
+Number KWL_Stufe "KWL Lüfterstufe" (KWL, KWL_Manuell) { helios="fan_stage" }
+Number KWL_Stufe_Prozent "KWL Lüfterstufe [%d%%]" (KWL, KWL_Manuell) { helios="percentage_fan_stage" }
+
+// Partybetrieb
+Switch KWL_Partybetrieb "Partybetrieb" (KWL) { helios="party-mode" }
+Number KWL_Partybetrieb_Dauer "Partybetrieb Dauer" (KWL) { helios="party-mode_duration" }
+Number KWL_Partybetrieb_Stufe "Partybetrieb Lüfterstufe" (KWL) { helios="party-mode_fan_stage" }
+Number KWL_Partybetrieb_Restdauer "Partybetrieb Restdauer [%d min]" (KWL) { helios="party-mode_remaining_time" }
+
+// Ruhebetrieb
+Switch KWL_Ruhebetrieb "Ruhebetrieb" (KWL) { helios="standby-mode" }
+Number KWL_Ruhebetrieb_Dauer "Ruhebetrieb Dauer" (KWL) { helios="standby-mode_duration" }
+Number KWL_Ruhebetrieb_Stufe "Ruhebetrieb Lüfterstufe" (KWL) { helios="standby-mode_fan_stage" }
+Number KWL_Ruhebetrieb_Restdauer "Ruhebetrieb Restdauer [%d min]" (KWL) { helios="standby-mode_remaining_time" }
+
+// Statusinfos
+Number KWL_Temp_Aussenluft "Temperatur Außenluft [%.1f °C]" (KWL, KWL_Status) { helios="temperature_outside_air" }
+Number KWL_Temp_Zuluft "Temperatur Zuluft [%.1f °C]" (KWL, KWL_Status) { helios="temperature_supply_air" }
+Number KWL_Temp_Fortluft "Temperatur Fortluft [%.1f °C]" (KWL, KWL_Status) { helios="temperature_outgoing_air" }
+Number KWL_Temp_Abluft "Temperatur Abluft [%.1f °C]" (KWL, KWL_Status) { helios="temperature_extract_air" }
+Number KWL_Zuluft_RPM "Drehzahl Zuluft [%d]" (KWL, KWL_Status) { helios="supply_air_rpm" }
+Number KWL_Abluft_RPM "Drehzahl Abluft [%d]" (KWL, KWL_Status) { helios="extract_air_rpm" }
+Switch KWL_Filterwechsel "Filterwechsel [MAP(helios_ja_nein.map):%s]" (KWL, KWL_Status) { helios="filter_change" }
+Number KWL_Filterwechsel_Restdauer "Filterwechsel Restdauer [%d min]" (KWL, KWL_Status) { helios="filter_change_remaining_time" }
+Number KWL_Filterwechsel_Restdauer_d "Filterwechsel Restdauer [%.0f Tage]" (KWL, KWL_Status)
+String KWL_Fehler "Fehler" (KWL, KWL_Status) { helios="errors_string" }
+String KWL_Warnungen "Warnungen" (KWL, KWL_Status) { helios="warnings_string" }
+String KWL_Infos "Infos" (KWL, KWL_Status) { helios="infos_string" }
