@@ -80,7 +80,7 @@ public class HeliosVariableMap {
 		this.vMap.put("time_zone_diff_to_gmt", new HeliosVariable(51, HeliosVariable.ACCESS_RW, 3, 6, HeliosVariable.TYPE_INTEGER, -12, 14));
 		this.vMap.put("date_format", new HeliosVariable(52, HeliosVariable.ACCESS_RW, 1, 5, HeliosVariable.TYPE_INTEGER, 0, 2));
 		
-		this.vMap.put("heat_exchanger_type", new HeliosVariable(53, HeliosVariable.ACCESS_RW, 1, 5, HeliosVariable.TYPE_INTEGER, 0, 3));
+		this.vMap.put("heat_exchanger_type", new HeliosVariable(53, HeliosVariable.ACCESS_RW, 1, 5, HeliosVariable.TYPE_INTEGER, 1, 3));
 		
 		this.vMap.put("party-mode_duration", new HeliosVariable(91, HeliosVariable.ACCESS_RW, 3, 6, HeliosVariable.TYPE_INTEGER, 5, 180));
 		this.vMap.put("party-mode_fan_stage", new HeliosVariable(92, HeliosVariable.ACCESS_RW, 3, 5, HeliosVariable.TYPE_INTEGER, 0, 4));
@@ -93,7 +93,7 @@ public class HeliosVariableMap {
 		this.vMap.put("standby-mode", new HeliosVariable(99, HeliosVariable.ACCESS_RW, 1, 5, HeliosVariable.TYPE_INTEGER, 0, 1));
 		
 		this.vMap.put("operating_mode", new HeliosVariable(101, HeliosVariable.ACCESS_RW, 1, 5, HeliosVariable.TYPE_INTEGER, 0, 1));
-		this.vMap.put("fan_stage", new HeliosVariable(102, HeliosVariable.ACCESS_RW, 3, 5, HeliosVariable.TYPE_INTEGER, 0, 4));
+		this.vMap.put("fan_stage", new HeliosVariable(102, HeliosVariable.ACCESS_RW, 1, 5, HeliosVariable.TYPE_INTEGER, 0, 4));
 		this.vMap.put("percentage_fan_stage", new HeliosVariable(103, HeliosVariable.ACCESS_R, 3, 6, HeliosVariable.TYPE_INTEGER, 0, 100));
 		
 		this.vMap.put("temperature_outside_air", new HeliosVariable(104, HeliosVariable.ACCESS_R, 7, 8, HeliosVariable.TYPE_INTEGER, -27, 9998));
