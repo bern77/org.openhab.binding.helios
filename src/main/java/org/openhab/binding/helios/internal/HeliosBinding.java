@@ -182,7 +182,7 @@ public class HeliosBinding extends AbstractActiveBinding<HeliosBindingProvider> 
 		switch (heliosType) {
 			case HeliosVariable.TYPE_INTEGER:
 			case HeliosVariable.TYPE_FLOAT:
-				if (dataTypes.contains(OnOffType.class)) return heliosValue == "1" ? OnOffType.ON : OnOffType.OFF;
+				if (dataTypes.contains(OnOffType.class)) return heliosValue.equals("1") ? OnOffType.ON : OnOffType.OFF;
 				else return DecimalType.valueOf(heliosValue);
 			case HeliosVariable.TYPE_STRING:
 				return StringType.valueOf(heliosValue);
